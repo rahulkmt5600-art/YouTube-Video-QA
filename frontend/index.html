@@ -1,0 +1,173 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>YouTube RAG Assistant</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="app">
+
+        <!-- HEADER -->
+        <header class="header">
+
+            <div>
+                <h1>🎥 YouTube RAG Assistant</h1>
+
+                <p>
+                    Ask questions and get answers directly from a YouTube video.
+                </p>
+            </div>
+
+            <div class="status-badge">
+                <span></span>
+                AI Online
+            </div>
+
+        </header>
+
+
+        <!-- VIDEO SECTION -->
+        <section class="video-section">
+
+            <div class="section-title">
+                <h2>Video</h2>
+                <span id="videoStatus">Not processed</span>
+            </div>
+
+            <div class="url-container">
+
+                <input
+                    type="text"
+                    id="youtubeUrl"
+                    placeholder="Paste YouTube video URL..."
+                >
+
+                <button id="processBtn">
+                    Process Video
+                </button>
+
+            </div>
+
+            <div id="videoPreview" class="video-preview">
+
+                <div class="video-placeholder">
+
+                    <div class="youtube-icon">
+                        ▶
+                    </div>
+
+                    <p>
+                        Paste a YouTube URL and process the video
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div id="status" class="status"></div>
+
+        </section>
+
+
+        <!-- CHAT SECTION -->
+        <section class="chat-section">
+
+            <div class="section-title">
+
+                <div>
+                    <h2>Ask About the Video</h2>
+
+                    <p>
+                        Ask anything related to the video content.
+                    </p>
+                </div>
+
+                <button
+                    id="clearBtn"
+                    class="clear-btn"
+                >
+                    Clear Chat
+                </button>
+
+            </div>
+
+
+            <!-- CHAT MESSAGES -->
+            <div
+                id="chatMessages"
+                class="chat-messages"
+            >
+
+                <div class="welcome-message">
+
+                    <div class="bot-icon">
+                        AI
+                    </div>
+
+                    <div>
+
+                        <strong>YouTube RAG Assistant</strong>
+
+                        <p>
+                            Process a YouTube video first, then ask me questions
+                            about its content.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- QUESTION INPUT -->
+            <div class="question-container">
+
+                <input
+                    type="text"
+                    id="question"
+                    placeholder="Ask a question about the video..."
+                    disabled
+                >
+
+                <button
+                    id="askBtn"
+                    disabled
+                >
+                    Send
+                </button>
+
+            </div>
+
+            <p class="input-hint">
+                Press Enter to send your question.
+            </p>
+
+        </section>
+
+
+        <!-- FOOTER -->
+        <footer>
+
+            <p>
+                Built with LangChain • FAISS • Hugging Face • Gemini • FastAPI
+            </p>
+
+        </footer>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

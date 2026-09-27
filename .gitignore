@@ -1,0 +1,30 @@
+# Python
+__pycache__/
+*.py[cod]
+
+# Virtual environment
+venv/
+.venv/
+
+# Environment variables / secrets
+.env
+.env.*
+
+# Vector database / generated data
+backend/vectorstores/
+backend/cache/
+
+# Downloaded subtitles
+*.vtt
+*.srt
+*.ttml
+
+# Python/Jupyter
+.ipynb_checkpoints/
+
+# IDE
+.vscode/
+
+# OS
+.DS_Store
+Thumbs.db
